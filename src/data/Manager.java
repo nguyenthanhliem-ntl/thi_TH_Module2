@@ -93,15 +93,14 @@ public class Manager {
     }
 
     //tìm danh bạ theo số điện thoại
-    public Messeger findMesseger(String phone){
-        Messeger telephoneDirectory = null;
-        for ( Messeger d: messegerList
+    public void findMesseger(String phone) {
+        for (Messeger check1 : messegerList
         ) {
-            if(d.getPhone().equals(phone))
-                telephoneDirectory = d;
+            if (check1.getPhone().contains(phone)) {
+                System.out.println(check1);
 
+            }
         }
-        return telephoneDirectory;
     }
 //check phone trùng
     private boolean checkPhone(String phone) {
